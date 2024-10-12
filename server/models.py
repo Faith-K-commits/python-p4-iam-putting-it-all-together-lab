@@ -5,7 +5,7 @@ from sqlalchemy import CheckConstraint
 
 from config import db, bcrypt
 
-class User(db.Model):
+class User(db.Model, SerializerMixin):
     __tablename__ = 'users'
     
     id = db.Column(db.Integer, primary_key=True)
